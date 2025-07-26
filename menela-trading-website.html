@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENELA TRADING - Comércio de Cosméticos Premium</title>
+    <meta name="description" content="Distribuidora atacadista de cosméticos e perfumaria com atuação nacional e internacional">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Marcellus&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#b78d65",
+                        secondary: "#1a1a1a",
+                        accent: "#8b0000"
+                    },
+                    fontFamily: {
+                        heading: ["Cinzel", "serif"],
+                        subheading: ["Playfair Display", "serif"],
+                        body: ["Marcellus", "serif"]
+                    },
+                    backgroundImage: {
+                        'texture': "url('https://picsum.photos/2000/2000?random=1&blur=1')",
+                        'marble': "url('https://picsum.photos/2000/2000?random=2&grayscale')"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .texture-bg {
+            background-image: url('https://picsum.photos/2000/2000?random=1&blur=1');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .marble-bg {
+            background-image: url('https://picsum.photos/2000/2000?random=2&grayscale');
+            background-size: cover;
+            background-position: center;
+        }
+        .gold-border {
+            border: 1px solid #b78d65;
+        }
+        .transition-slow {
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body class="font-body text-secondary bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-heading font-bold">
+                    <span class="text-primary">MENELA</span> TRADING
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="hover:text-primary transition-slow font-subheading">Home</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-slow font-subheading">Sobre</a></li>
+                        <li><a href="#products" class="hover:text-primary transition-slow font-subheading">Produtos</a></li>
+                        <li><a href="#testimonials" class="hover:text-primary transition-slow font-subheading">Depoimentos</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-slow font-subheading">Contato</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center texture-bg bg-opacity-10">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-heading font-bold text-white mb-6">ELEGÂNCIA EM <span class="text-primary">COSMÉTICOS</span></h1>
+            <p class="text-xl md:text-2xl font-subheading text-white mb-8 max-w-2xl mx-auto">Distribuidora atacadista de produtos premium para beleza e estética</p>
+            <a href="#contact" class="bg-primary hover:bg-opacity-90 text-white font-subheading px-8 py-3 rounded-sm transition-slow">FALE CONOSCO</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 marble-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading mb-4">SOBRE A <span class="text-primary">MENELA TRADING</span></h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-subheading mb-6">Nossa História</h3>
+                    <p class="mb-6">Fundada em 2020, a MENELA TRADING nasceu da paixão por cosméticos de alta qualidade e do desejo de conectar marcas premium a consumidores exigentes em todo o mundo.</p>
+                    <p class="mb-6">Com sede em Limeira/SP, expandimos nossas operações para o mercado internacional, tornando-nos referência em importação e exportação de produtos de beleza.</p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="border-l-2 border-primary pl-4">
+                            <h4 class="font-subheading text-lg">Missão</h4>
+                            <p>Oferecer produtos de beleza premium com excelência logística e compromisso com qualidade.</p>
+                        </div>
+                        <div class="border-l-2 border-primary pl-4">
+                            <h4 class="font-subheading text-lg">Visão</h4>
+                            <p>Tornar-nos líderes no comércio internacional de cosméticos sofisticados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://picsum.photos/600/400?random=3" alt="Nossa equipe" class="w-full rounded-sm shadow-lg">
+                    <div class="absolute -bottom-6 -right-6 bg-primary p-4 text-white w-2/3">
+                        <h4 class="font-subheading text-lg">CNPJ: 37.735.744/0001-64</h4>
+                        <p>Desde 15/07/2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading mb-4">NOSSOS <span class="text-primary">PRODUTOS</span></h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white shadow-md hover:shadow-xl transition-slow overflow-hidden">
+                    <img src="https://picsum.photos/600/400?random=4" alt="Perfumes importados" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-subheading text-xl mb-2">Perfumes Importados</h3>
+                        <p class="mb-4">Fragrâncias exclusivas das melhores marcas internacionais.</p>
+                        <a href="#contact" class="text-primary font-subheading hover:underline">Solicitar catálogo</a>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white shadow-md hover:shadow-xl transition-slow overflow-hidden">
+                    <img src="https://picsum.photos/600/400?random=5" alt="Maquiagem profissional" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-subheading text-xl mb-2">Maquiagem Profissional</h3>
+                        <p class="mb-4">Linha completa para profissionais e varejo premium.</p>
+                        <a href="#contact" class="text-primary font-subheading hover:underline">Solicitar catálogo</a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white shadow-md hover:shadow-xl transition-slow overflow-hidden">
+                    <img src="https://picsum.photos/600/400?random=6" alt="Cuidados com a pele" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-subheading text-xl mb-2">Cuidados com a Pele</h3>
+                        <p class="mb-4">Sérum, cremes e tratamentos faciais de alta performance.</p>
+                        <a href="#contact" class="text-primary font-subheading hover:underline">Solicitar catálogo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 marble-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading mb-4">DEPOIMENTOS DE <span class="text-primary">PARCEIROS</span></h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 shadow-md relative">
+                    <div class="absolute -top-4 -left-4 text-6xl text-primary font-subheading">"</div>
+                    <p class="mb-6 italic">"A MENELA TRADING nos fornece os melhores produtos franceses com logística impecável. Parceria essencial para nosso negócio."</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/100?random=7" alt="Jean Dubois" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-subheading">Jean Dubois</h4>
+                            <p class="text-sm text-gray-600">L'Oréal Paris</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 shadow-md relative">
+                    <div class="absolute -top-4 -left-4 text-6xl text-primary font-subheading">"</div>
+                    <p class="mb-6 italic">"Excelente distribuidora para o mercado brasileiro. Produtos autênticos e atendimento diferenciado."</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/100?random=8" alt="Maria Fernandez" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-subheading">Maria Fernandez</h4>
+                            <p class="text-sm text-gray-600">Natura &Co</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 shadow-md relative">
+                    <div class="absolute -top-4 -left-4 text-6xl text-primary font-subheading">"</div>
+                    <p class="mb-6 italic">"Confiamos na MENELA para representar nossa marca no Brasil. Profissionalismo e conhecimento de mercado."</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/100?random=9" alt="Thomas Müller" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-subheading">Thomas Müller</h4>
+                            <p class="text-sm text-gray-600">Beiersdorf AG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-secondary text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading mb-4">FALE <span class="text-primary">CONOSCO</span></h2>
+                <div class="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="font-subheading text-2xl mb-6">Informações de Contato</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-primary mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-subheading">Endereço</h4>
+                                <p>Rua Túlio Taques de Lemos, 114</p>
+                                <p>Parque das Nações — Limeira/SP</p>
+                                <p>CEP: 13.481-035</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-primary mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-subheading">Telefone</h4>
+                                <p>(21) 95927-3784</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-primary mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-subheading">E-mail</h4>
+                                <p>contato@menelatrading.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <h4 class="font-subheading text-xl mb-4">Horário de Funcionamento</h4>
+                        <p>Segunda a Sexta: 9h às 18h</p>
+                        <p>Sábado: 9h às 13h</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-subheading text-2xl mb-6">Envie uma Mensagem</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block mb-2">Nome</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 focus:border-primary focus:outline-none">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2">E-mail</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 focus:border-primary focus:outline-none">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2">Assunto</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 focus:border-primary focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Mensagem</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 focus:border-primary focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary hover:bg-opacity-90 text-white font-subheading px-8 py-3 rounded-sm transition-slow">ENVIAR MENSAGEM</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-heading mb-4">
+                        <span class="text-primary">MENELA</span> TRADING
+                    </h3>
+                    <p class="mb-4">Distribuidora atacadista de cosméticos e perfumaria com atuação nacional e internacional.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-primary transition-slow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-slow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-slow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-subheading text-lg mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-primary transition-slow">Home</a></li>
+                        <li><a href="#about" class="hover:text-primary transition-slow">Sobre Nós</a></li>
+                        <li><a href="#products" class="hover:text-primary transition-slow">Produtos</a></li>
+                        <li><a href="#testimonials" class="hover:text-primary transition-slow">Depoimentos</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-slow">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-subheading text-lg mb-4">Nossos Produtos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary transition-slow">Perfumes Importados</a></li>
+                        <li><a href="#" class="hover:text-primary transition-slow">Maquiagem Profissional</a></li>
+                        <li><a href="#" class="hover:text-primary transition-slow">Cuidados com a Pele</a></li>
+                        <li><a href="#" class="hover:text-primary transition-slow">Equipamentos de Estética</a></li>
+                        <li><a href="#" class="hover:text-primary transition-slow">Acessórios</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-subheading text-lg mb-4">Newsletter</h4>
+                    <p class="mb-4">Assine para receber nossas novidades e promoções.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 w-full text-gray-900 focus:outline-none">
+                        <button type="submit" class="bg-primary hover:bg-opacity-90 px-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p>&copy; 2023 MENELA TRADING COMÉRCIO, IMPORTAÇÃO E EXPORTAÇÃO DE COSMÉTICOS LTDA. Todos os direitos reservados.</p>
+                <p class="mt-2">CNPJ: 37.735.744/0001-64</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('button[aria-label="Mobile menu"]');
+        const mobileMenu = document.querySelector('nav ul');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
